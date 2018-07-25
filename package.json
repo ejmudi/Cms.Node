@@ -10,13 +10,14 @@
       "typescript": "2.5.2"
    },
    "dependencies": {
-      "typeorm": "0.2.7",
-      "reflect-metadata": "^0.1.10",
-      "mssql": "^4.0.4",
+      "body-parser": "^1.18.1",
+      "ejs": "^2.6.1",
       "express": "^4.15.4",
-      "body-parser": "^1.18.1"
+      "mssql": "^4.0.4",
+      "reflect-metadata": "^0.1.10",
+      "typeorm": "0.2.7"
    },
    "scripts": {
-      "start": "nodemon --exec ts-node src/index.ts"
+      "start": "nodemon --exec ts-node src/app.ts"
    }
 }

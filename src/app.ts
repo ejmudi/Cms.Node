@@ -1,3 +1,5 @@
+var path = require('path');
+
 import "reflect-metadata";
 import {createConnection} from "typeorm";
 import * as express from "express";
@@ -26,6 +28,8 @@ createConnection().then(async connection => {
     });
 
     // setup express app here
+    app.set('views', path.join(__dirname, 'views'));
+    app.set('view engine', 'ejs')
     // ...
 
     // start express server
