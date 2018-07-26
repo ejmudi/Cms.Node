@@ -1,21 +1,21 @@
 import {getRepository} from "typeorm";
 import {NextFunction, Request, Response} from "express";
-import {User} from "../entity/User";
+import {BlogPost} from "../entity/BlogPost";
 
-export class UserController {
+export class BlogPostController {
 
-    private userRepository = getRepository(User);
+    private blogRepository = getRepository(BlogPost);
 
     async index(request: Request, response: Response, next: NextFunction) {
-        return this.userRepository.find();
+        return this.blogRepository.find();
     }
 
     async edit(request: Request, response: Response, next: NextFunction) {
-        return this.userRepository.findOne(request.params.id);
+        return this.blogRepository.findOne(request.params.id);
     }
 
     async addOrUpdate(request: Request, response: Response, next: NextFunction) {
-        return this.userRepository.save(request.body);
+        return this.blogRepository.save(request.body);
     }
 
     async delete(request: Request, response: Response, next: NextFunction) {
