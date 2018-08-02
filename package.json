@@ -18,6 +18,10 @@
       "typeorm": "0.2.7"
    },
    "scripts": {
-      "start": "nodemon --exec ts-node src/app.ts"
+      "start": "nodemon --exec ts-node src/app.ts",
+      "migration": "ts-node --exec './node_modules/typeorm/cli.js' migration:generate -n BlogPostName",
+      "migrations:generate": "ts-node --exec './node_modules/typeorm/cli.js' migrations:generate --name BlogPostName",
+      "migrations:run": "ts-node ./node_modules/typeorm/cli.js migrations:run",
+      "migrations:revert": "ts-node ./node_modules/typeorm/cli.js migrations:revert"
    }
 }

@@ -10,10 +10,7 @@ export class BlogPost {
     id: number;
 
     @Column()
-    firstName: string;
-
-    @Column()
-    lastName: string;
+    name: string;
 
     @OneToOne(type => FeaturedImage)
     @JoinColumn()

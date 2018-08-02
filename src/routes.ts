@@ -8,23 +8,33 @@ export const Routes = [{
     action: "index"
 },
     {
-    method: "get",
-    route: "/users",
+    method: "get",//http methods
+    route: "/blogs",
     controller: BlogPostController,
     action: "index"
 }, {
     method: "get",
-    route: "/users/:id",
+    route: "/blogs/:id",
+    controller: BlogPostController,
+    action: "view"
+}, {
+    method: "get",
+    route: "/blogs/edit/:id/:name",
     controller: BlogPostController,
     action: "edit"
 }, {
-    method: "post",
-    route: "/users",
+    method: "get",
+    route: "/blogs/addOrUpdate/:name",
     controller: BlogPostController,
     action: "addOrUpdate"
 }, {
-    method: "delete",
-    route: "/users",
+    method: "get",
+    route: "/blogs/:id",
     controller: BlogPostController,
     action: "delete"
+},{
+    method: "get",
+    route: "/blogs",
+    controller: BlogPostController,
+    action: "deleteAll"
 }];
